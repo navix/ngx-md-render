@@ -1,6 +1,8 @@
 # MdRender
 
-Convert Markdown to HTML with Highlight.js for code snippets.
+Angular 2+ module form converting Markdown to HTML with Highlight.js for code snippets.
+
+![demo](demo.png)
 
 ## Install
 
