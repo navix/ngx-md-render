@@ -1,0 +1,19 @@
+{
+  "name": "@nvxme/ngx-md-render",
+  "version": "1.0.0-alpha.1",
+  "description": "Angular Module for markdown rendering with Highlight.js integration",
+  "main": "bundle/md-render.umd.js",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "author": "Sasha Novik",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/Navix/ngx-md-render.git",
+    "type": "git"
+  },
+  "dependencies": {
+    "he": "^1.1.1",
+    "highlight.js": "^9.10.0",
+    "showdown": "^1.6.4"
+  }
+}
