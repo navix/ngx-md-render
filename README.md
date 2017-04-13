@@ -1,28 +1,56 @@
-# NgxMdParseDemo
+# MdRender
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+Convert Markdown to HTML with Highlight.js for code snippets.
 
-## Development server
+## Install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`npm install @nvxme/ngx-md-render --save`
 
-## Code scaffolding
+## Import module
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+```ts
+...
+import { MdRenderModule } from '../package/md-render.module';
 
-## Build
+@NgModule({
+  imports: [
+    ...
+    MdRenderModule,
+  ],
+  ...
+})
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Use the service
 
-## Running unit tests
+```ts
+...
+source: string;
+rendered: SafeHtml;
+...
+constructor(private sanitizer: DomSanitizer,
+            private mdRender: MdRenderService) {
+}
+...
+const html = this.mdRender.render(this.source);
+const this.rendered = this.sanitizer.bypassSecurityTrustHtml(html);
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Output in template
 
-## Running end-to-end tests
+```html
+<div [innerHtml]="rendered"></div>
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+## Code styling
 
-## Further help
+Import style in `.angular-cli.json`:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+{
+...
+  "styles": [
+    "styles.css",
+    "../node_modules/highlight.js/styles/dracula.css"
+  ],
+```

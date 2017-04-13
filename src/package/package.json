@@ -1,6 +1,6 @@
 {
   "name": "@nvxme/ngx-md-render",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.3",
   "description": "Angular Module for markdown rendering with Highlight.js integration",
   "main": "bundle/md-render.umd.js",
   "module": "index.js",

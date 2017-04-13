@@ -9,11 +9,13 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "release": "npm run release:clean && npm run release:ngc && npm run release:rollup && npm run release:copypkg",
+    "release": "npm run release:clean && npm run release:ngc && npm run release:rollup && npm run release:copy:pkg && npm run release:copy:readme && npm run release:publish",
     "release:clean": "rimraf ./dist",
     "release:ngc": "ngc -p tsconfig-release.json",
     "release:rollup": "rollup -c rollup.config.js",
-    "release:copypkg": "ncp ./src/package/package.json ./dist/package.json"
+    "release:copy:pkg": "ncp ./src/package/package.json ./dist/package.json",
+    "release:copy:readme": "ncp ./README.md ./dist/README.md",
+    "release:publish": "npm publish ./dist --access=public"
   },
   "private": true,
   "dependencies": {

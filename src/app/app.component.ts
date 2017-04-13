@@ -38,7 +38,7 @@ Text
   }
 
   ngOnInit() {
-    this.rendered = this.mdRender.render(this.source);
+    this.rendered = this.sanitizer.bypassSecurityTrustHtml(this.mdRender.render(this.source));
   }
 
 }
