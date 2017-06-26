@@ -12,7 +12,7 @@ Angular 2+ module form converting Markdown to HTML with Highlight.js for code sn
 
 ```ts
 ...
-import { MdRenderModule } from '../package/md-render.module';
+import { MdRenderModule } from '@nvxme/ngx-md-render';
 
 @NgModule({
   imports: [

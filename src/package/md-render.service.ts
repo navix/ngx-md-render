@@ -13,7 +13,6 @@ export class MdRenderService {
         type: 'output',
         filter: function (text, converter, options) {
           const replacement = (wholeMatch, match, left, right) => {
-            console.log('match', wholeMatch);
             match = he.decode(match);
             // get lang
             const search = left.match(/.*language-(\w*).*/);
@@ -32,7 +31,8 @@ export class MdRenderService {
 
   render(source: string): string {
     const converter = new showdown.Converter({
-      extensions: ['highlight']
+      extensions: ['highlight'],
+      tables: true,
     });
     return converter.makeHtml(source);
   }
