@@ -2,7 +2,11 @@
   "angularCompilerOptions": {
     "genDir": "aot",
     "skipTemplateCodegen": true,
-    "skipMetadataEmit": false
+    "skipMetadataEmit": false,
+    "strictMetadataEmit": true,
+    "annotateForClosureCompiler": true,
+    "flatModuleOutFile": "ngx-md-render.js",
+    "flatModuleId": "@nvxme/ngx-md-render"
   },
   "compilerOptions": {
     "target": "es5",
@@ -19,6 +23,6 @@
     "lib": ["dom", "es2015", "es2016"]
   },
   "files": [
-    "./src/package/index.ts"
+    "./src/package/public_api.ts"
   ]
 }

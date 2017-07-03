@@ -1,10 +1,10 @@
 {
   "name": "@nvxme/ngx-md-render",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "Angular Module for markdown rendering with Highlight.js integration",
-  "main": "bundle/md-render.umd.js",
-  "module": "index.js",
-  "types": "index.d.ts",
+  "main": "./bundle/ngx-md-render.umd.js",
+  "module": "./module/ngx-md-render.js",
+  "types": "./ngx-md-render.d.ts",
   "author": "Sasha Novik",
   "license": "MIT",
   "repository": {

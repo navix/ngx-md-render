@@ -1,6 +1,6 @@
 export default {
-  entry: 'dist/index.js',
-  dest: 'dist/bundle/md-render.umd.js',
+  entry: 'dist/ngx-md-render.js',
+  dest: 'dist/bundle/ngx-md-render.umd.js',
   format: 'umd',
   exports: 'named',
   moduleName: 'md-render',
